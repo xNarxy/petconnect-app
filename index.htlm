@@ -7,18 +7,18 @@
 <style>
 /* ── TOKENS ── */
 :root {
-  --ink:     #0A0F0D;
-  --green:   #1B7A4E;
-  --green2:  #14623E;
-  --green3:  #0D4A2F;
-  --mint:    #E8F5EE;
-  --cream:   #F7F2EA;
-  --gold:    #C9963A;
-  --gold-l:  #F5E9CE;
+  --ink:     #1A1A2E;
+  --green:   #6B4FA0;
+  --green2:  #5A3F8F;
+  --green3:  #3D2570;
+  --mint:    #F0EBF8;
+  --cream:   #F8F6FC;
+  --gold:    #9B6FD4;
+  --gold-l:  #E8E0F5;
   --white:   #FFFFFF;
-  --muted:   #6B7870;
-  --border:  #E2EAE6;
-  --bg:      #F4F0E8;
+  --muted:   #6B6880;
+  --border:  #E2DCF0;
+  --bg:      #F5F2FA;
   --card:    #FFFFFF;
   --r-lg:    20px;
   --r-md:    14px;
@@ -27,7 +27,7 @@
 
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
 body{
-  background: linear-gradient(135deg,#0D2418 0%,#1a3a28 50%,#0D2418 100%);
+  background: linear-gradient(135deg,#1A0A3D 0%,#2D1660 50%,#1A0A3D 100%);
   min-height:100vh; display:flex; align-items:center; justify-content:center;
   font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;
 }
@@ -97,7 +97,7 @@ body{
 #splash{ background:var(--green3); display:flex; flex-direction:column; align-items:center; justify-content:center; }
 .splash-bg{
   position:absolute; inset:0;
-  background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(27,122,78,.6) 0%, transparent 70%);
+  background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(107,79,160,.6) 0%, transparent 70%);
 }
 .splash-paw{ font-size:72px; margin-bottom:20px; animation:float 3s ease-in-out infinite; position:relative; z-index:1; }
 @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
@@ -105,12 +105,12 @@ body{
 .splash-tag{ font-size:15px; color:rgba(255,255,255,.55); margin-top:8px; position:relative; z-index:1; }
 .splash-cta{
   margin-top:40px; position:relative; z-index:1;
-  background:var(--gold); color:var(--ink); font-size:17px; font-weight:700;
+  background:var(--gold); color:var(--white); font-size:17px; font-weight:700;
   padding:17px 52px; border-radius:100px; border:none; cursor:pointer;
-  box-shadow:0 8px 28px rgba(201,150,58,.45); transition:transform .15s,box-shadow .15s;
+  box-shadow:0 8px 28px rgba(107,79,160,.45); transition:transform .15s,box-shadow .15s;
   letter-spacing:-.2px;
 }
-.splash-cta:active{ transform:scale(.97); box-shadow:0 4px 12px rgba(201,150,58,.3); }
+.splash-cta:active{ transform:scale(.97); box-shadow:0 4px 12px rgba(107,79,160,.3); }
 .splash-link{ margin-top:16px; font-size:14px; color:rgba(255,255,255,.45); cursor:pointer; position:relative; z-index:1; }
 .splash-stats{
   position:relative; z-index:1;
@@ -291,7 +291,7 @@ body{
   width:100%; background:var(--green); color:var(--white);
   font-size:17px; font-weight:700; padding:18px; border-radius:var(--r-lg);
   border:none; cursor:pointer; margin-top:22px;
-  box-shadow:0 6px 22px rgba(27,122,78,.32); transition:transform .15s;
+  box-shadow:0 6px 22px rgba(107,79,160,.32); transition:transform .15s;
 }
 .book-btn:active{ transform:scale(.98); }
 
@@ -355,10 +355,10 @@ body{
 .sum-disc{ color:var(--green) !important; }
 
 .pay-btn{
-  width:100%; background:var(--gold); color:var(--ink);
+  width:100%; background:var(--gold); color:var(--white);
   font-size:17px; font-weight:700; padding:18px; border-radius:var(--r-lg);
   border:none; cursor:pointer; margin-top:16px;
-  box-shadow:0 6px 22px rgba(201,150,58,.35); transition:transform .15s;
+  box-shadow:0 6px 22px rgba(107,79,160,.35); transition:transform .15s;
   display:flex; align-items:center; justify-content:center; gap:8px;
 }
 .pay-btn:active{ transform:scale(.98); }
@@ -368,7 +368,7 @@ body{
 #gps{ background:var(--bg); }
 .map-wrap{
   position:relative; height:300px;
-  background:linear-gradient(180deg,#C8DCBA 0%,#B5CE9F 50%,#A6C285 100%);
+  background:linear-gradient(180deg,#D8D0F0 0%,#C4B8E8 50%,#B0A0D8 100%);
   overflow:hidden;
 }
 /* SVG calles */
@@ -377,12 +377,12 @@ body{
 .tracker{
   position:absolute; width:18px; height:18px; border-radius:50%;
   background:var(--green); border:3px solid var(--white);
-  box-shadow:0 2px 10px rgba(27,122,78,.5); z-index:10;
+  box-shadow:0 2px 10px rgba(107,79,160,.5); z-index:10;
   animation:walkPath 10s linear infinite;
 }
 .tracker-ring{
   position:absolute; width:40px; height:40px; border-radius:50%;
-  background:rgba(27,122,78,.25); z-index:9;
+  background:rgba(107,79,160,.25); z-index:9;
   animation:walkPath 10s linear infinite, ring 1.8s ease-out infinite;
   margin:-11px;
 }
@@ -403,7 +403,7 @@ body{
   position:absolute; top:54px; left:36px; z-index:11;
   background:var(--green); color:var(--white); font-size:11px; font-weight:700;
   padding:4px 10px; border-radius:100px; white-space:nowrap;
-  box-shadow:0 2px 8px rgba(27,122,78,.4);
+  box-shadow:0 2px 8px rgba(107,79,160,.4);
 }
 .live-badge{
   position:absolute; top:60px; right:16px; z-index:11;
@@ -460,7 +460,7 @@ body{
 .confirm-circle{
   width:96px; height:96px; border-radius:50%; background:var(--green);
   display:flex; align-items:center; justify-content:center; font-size:44px;
-  box-shadow:0 12px 36px rgba(27,122,78,.35); margin-bottom:24px;
+  box-shadow:0 12px 36px rgba(107,79,160,.35); margin-bottom:24px;
   animation:pop .45s cubic-bezier(.4,0,.2,1);
 }
 @keyframes pop{ 0%{transform:scale(0)} 80%{transform:scale(1.08)} 100%{transform:scale(1)} }
@@ -477,7 +477,7 @@ body{
 .conf-btn{
   width:100%; background:var(--green); color:var(--white);
   font-size:17px; font-weight:700; padding:18px; border-radius:var(--r-lg);
-  border:none; cursor:pointer; box-shadow:0 6px 22px rgba(27,122,78,.3);
+  border:none; cursor:pointer; box-shadow:0 6px 22px rgba(107,79,160,.3);
 }
 
 /* responsive mobile */
@@ -759,24 +759,24 @@ body{
     <div class="map-wrap">
       <!-- Calles SVG -->
       <svg class="map-svg" viewBox="0 0 393 300" xmlns="http://www.w3.org/2000/svg">
-        <rect width="393" height="300" fill="#C2D9AA"/>
+        <rect width="393" height="300" fill="#C4B8E8"/>
         <!-- manzanas -->
-        <rect x="0"   y="0"   width="80"  height="55" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="100" y="0"   width="90"  height="55" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="210" y="0"   width="80"  height="55" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="310" y="0"   width="83"  height="55" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="0"   y="75"  width="80"  height="70" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="100" y="75"  width="90"  height="70" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="210" y="75"  width="80"  height="70" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="310" y="75"  width="83"  height="70" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="0"   y="165" width="80"  height="80" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="100" y="165" width="90"  height="80" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="210" y="165" width="80"  height="80" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="310" y="165" width="83"  height="80" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="0"   y="265" width="80"  height="35" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="100" y="265" width="90"  height="35" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="210" y="265" width="80"  height="35" rx="4" fill="#B0CA93" opacity=".8"/>
-        <rect x="310" y="265" width="83"  height="35" rx="4" fill="#B0CA93" opacity=".8"/>
+        <rect x="0"   y="0"   width="80"  height="55" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="100" y="0"   width="90"  height="55" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="210" y="0"   width="80"  height="55" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="310" y="0"   width="83"  height="55" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="0"   y="75"  width="80"  height="70" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="100" y="75"  width="90"  height="70" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="210" y="75"  width="80"  height="70" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="310" y="75"  width="83"  height="70" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="0"   y="165" width="80"  height="80" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="100" y="165" width="90"  height="80" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="210" y="165" width="80"  height="80" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="310" y="165" width="83"  height="80" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="0"   y="265" width="80"  height="35" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="100" y="265" width="90"  height="35" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="210" y="265" width="80"  height="35" rx="4" fill="#A898D8" opacity=".8"/>
+        <rect x="310" y="265" width="83"  height="35" rx="4" fill="#A898D8" opacity=".8"/>
         <!-- calles -->
         <rect x="80"  y="0"   width="20" height="300" fill="rgba(255,255,255,.5)"/>
         <rect x="190" y="0"   width="20" height="300" fill="rgba(255,255,255,.5)"/>
@@ -850,40 +850,40 @@ const SERVICIOS = {
     titulo: 'Paseadores',
     count: '8 Pet Pros verificados en Palermo',
     pros: [
-      { ava:'🧑‍🦱', bg:'#E8F5EE', nombre:'Martín García',    rol:'Paseador · 320m',    stars:'★★★★★', rating:'5.0', reviews:'143', precio:'$2.800', unidad:'por paseo', disponible:true },
-      { ava:'👩‍🦰', bg:'#FEF3DC', nombre:'Valentina López',   rol:'Paseadora · 480m',   stars:'★★★★★', rating:'4.9', reviews:'98',  precio:'$2.600', unidad:'por paseo', disponible:true },
-      { ava:'👩‍🦳', bg:'#EEF0FE', nombre:'Ana Martínez',      rol:'Paseadora · 650m',   stars:'★★★★☆', rating:'4.7', reviews:'62',  precio:'$2.400', unidad:'por paseo', disponible:false },
-      { ava:'🧔',   bg:'#FDE8EF', nombre:'Diego Fernández',   rol:'Paseador · 710m',    stars:'★★★★★', rating:'5.0', reviews:'211', precio:'$3.000', unidad:'por paseo', disponible:true },
+      { ava:'🧑‍🦱', bg:'#F0EBF8', nombre:'Martín García',    rol:'Paseador · 320m',    stars:'★★★★★', rating:'5.0', reviews:'143', precio:'$2.800', unidad:'por paseo', disponible:true },
+      { ava:'👩‍🦰', bg:'#E8E0F5', nombre:'Valentina López',   rol:'Paseadora · 480m',   stars:'★★★★★', rating:'4.9', reviews:'98',  precio:'$2.600', unidad:'por paseo', disponible:true },
+      { ava:'👩‍🦳', bg:'#F0EBF8', nombre:'Ana Martínez',      rol:'Paseadora · 650m',   stars:'★★★★☆', rating:'4.7', reviews:'62',  precio:'$2.400', unidad:'por paseo', disponible:false },
+      { ava:'🧔',   bg:'#E8E0F5', nombre:'Diego Fernández',   rol:'Paseador · 710m',    stars:'★★★★★', rating:'5.0', reviews:'211', precio:'$3.000', unidad:'por paseo', disponible:true },
     ]
   },
   guarderia: {
     titulo: 'Guarderías',
     count: '5 guarderías verificadas en AMBA',
     pros: [
-      { ava:'👩‍🦳', bg:'#E8F5EE', nombre:'Casa Feliz Pets',   rol:'Guardería · Palermo', stars:'★★★★★', rating:'5.0', reviews:'87',  precio:'$4.500', unidad:'por día', disponible:true },
-      { ava:'👱‍♀️', bg:'#FEF3DC', nombre:'Sofía Rimoldi',     rol:'Cuidadora · Belgrano', stars:'★★★★★', rating:'4.9', reviews:'54', precio:'$4.000', unidad:'por día', disponible:true },
-      { ava:'🧑‍🦲', bg:'#EEF0FE', nombre:'Pet Home Caballito', rol:'Guardería · Caballito',stars:'★★★★☆', rating:'4.6', reviews:'41', precio:'$3.800', unidad:'por día', disponible:true },
-      { ava:'👩',   bg:'#FDE8EF', nombre:'Laura Gutiérrez',   rol:'Cuidadora · Villa Urquiza',stars:'★★★★★',rating:'4.8',reviews:'33', precio:'$4.200', unidad:'por día', disponible:false },
+      { ava:'👩‍🦳', bg:'#F0EBF8', nombre:'Casa Feliz Pets',   rol:'Guardería · Palermo', stars:'★★★★★', rating:'5.0', reviews:'87',  precio:'$4.500', unidad:'por día', disponible:true },
+      { ava:'👱‍♀️', bg:'#E8E0F5', nombre:'Sofía Rimoldi',     rol:'Cuidadora · Belgrano', stars:'★★★★★', rating:'4.9', reviews:'54', precio:'$4.000', unidad:'por día', disponible:true },
+      { ava:'🧑‍🦲', bg:'#F0EBF8', nombre:'Pet Home Caballito', rol:'Guardería · Caballito',stars:'★★★★☆', rating:'4.6', reviews:'41', precio:'$3.800', unidad:'por día', disponible:true },
+      { ava:'👩',   bg:'#E8E0F5', nombre:'Laura Gutiérrez',   rol:'Cuidadora · Villa Urquiza',stars:'★★★★★',rating:'4.8',reviews:'33', precio:'$4.200', unidad:'por día', disponible:false },
     ]
   },
   grooming: {
     titulo: 'Groomers',
     count: '6 groomers verificados en AMBA',
     pros: [
-      { ava:'👩‍🦰', bg:'#FEF3DC', nombre:'Valentina López',   rol:'Groomer · A domicilio', stars:'★★★★★', rating:'5.0', reviews:'120', precio:'$6.000', unidad:'por sesión', disponible:true },
-      { ava:'🧑‍🦱', bg:'#E8F5EE', nombre:'Esteban Ruiz',      rol:'Groomer · Palermo',    stars:'★★★★★', rating:'4.9', reviews:'88',  precio:'$5.500', unidad:'por sesión', disponible:true },
-      { ava:'👩‍🦳', bg:'#EEF0FE', nombre:'Camila Peralta',    rol:'Groomer · Recoleta',   stars:'★★★★☆', rating:'4.7', reviews:'66',  precio:'$5.000', unidad:'por sesión', disponible:false },
-      { ava:'🧔',   bg:'#FDE8EF', nombre:'Lucas Molina',      rol:'Groomer · San Telmo',  stars:'★★★★★', rating:'4.8', reviews:'44',  precio:'$5.800', unidad:'por sesión', disponible:true },
+      { ava:'👩‍🦰', bg:'#E8E0F5', nombre:'Valentina López',   rol:'Groomer · A domicilio', stars:'★★★★★', rating:'5.0', reviews:'120', precio:'$6.000', unidad:'por sesión', disponible:true },
+      { ava:'🧑‍🦱', bg:'#F0EBF8', nombre:'Esteban Ruiz',      rol:'Groomer · Palermo',    stars:'★★★★★', rating:'4.9', reviews:'88',  precio:'$5.500', unidad:'por sesión', disponible:true },
+      { ava:'👩‍🦳', bg:'#E8E0F5', nombre:'Camila Peralta',    rol:'Groomer · Recoleta',   stars:'★★★★☆', rating:'4.7', reviews:'66',  precio:'$5.000', unidad:'por sesión', disponible:false },
+      { ava:'🧔',   bg:'#F0EBF8', nombre:'Lucas Molina',      rol:'Groomer · San Telmo',  stars:'★★★★★', rating:'4.8', reviews:'44',  precio:'$5.800', unidad:'por sesión', disponible:true },
     ]
   },
   veterinaria: {
     titulo: 'Veterinarios',
     count: '7 veterinarios verificados en AMBA',
     pros: [
-      { ava:'👨‍⚕️', bg:'#E8F5EE', nombre:'Dr. Ramiro Solís',  rol:'Veterinario · A domicilio', stars:'★★★★★', rating:'5.0', reviews:'203', precio:'$9.000', unidad:'por consulta', disponible:true },
-      { ava:'👩‍⚕️', bg:'#FEF3DC', nombre:'Dra. Paula Ríos',   rol:'Veterinaria · Telemedicina',stars:'★★★★★', rating:'4.9', reviews:'156', precio:'$6.000', unidad:'teleconsulta',  disponible:true },
-      { ava:'👨‍⚕️', bg:'#EEF0FE', nombre:'Dr. Nicolás Vera',  rol:'Veterinario · Flores',     stars:'★★★★☆', rating:'4.7', reviews:'98',  precio:'$8.500', unidad:'por consulta', disponible:true },
-      { ava:'👩‍⚕️', bg:'#FDE8EF', nombre:'Dra. Florencia Kim', rol:'Veterinaria · A domicilio',stars:'★★★★★', rating:'4.8', reviews:'77',  precio:'$9.500', unidad:'por consulta', disponible:false },
+      { ava:'👨‍⚕️', bg:'#F0EBF8', nombre:'Dr. Ramiro Solís',  rol:'Veterinario · A domicilio', stars:'★★★★★', rating:'5.0', reviews:'203', precio:'$9.000', unidad:'por consulta', disponible:true },
+      { ava:'👩‍⚕️', bg:'#E8E0F5', nombre:'Dra. Paula Ríos',   rol:'Veterinaria · Telemedicina',stars:'★★★★★', rating:'4.9', reviews:'156', precio:'$6.000', unidad:'teleconsulta',  disponible:true },
+      { ava:'👨‍⚕️', bg:'#F0EBF8', nombre:'Dr. Nicolás Vera',  rol:'Veterinario · Flores',     stars:'★★★★☆', rating:'4.7', reviews:'98',  precio:'$8.500', unidad:'por consulta', disponible:true },
+      { ava:'👩‍⚕️', bg:'#E8E0F5', nombre:'Dra. Florencia Kim', rol:'Veterinaria · A domicilio',stars:'★★★★★', rating:'4.8', reviews:'77',  precio:'$9.500', unidad:'por consulta', disponible:false },
     ]
   }
 };
